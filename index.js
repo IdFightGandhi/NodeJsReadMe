@@ -57,24 +57,30 @@ function createReadmeFile(output) {
 
 
     const mdtext = `
-# Here is a H1 Header
-Title = "$(data.title)"
-## Here is an H2 header
-Project Description = "$(data.description)"
-## Installation Info
-Installation Info = "$(data.installation)"
+# ${output.title}
+
+
+## Project Description
+
+${output.description}
+
+## Installation Info 
+
+${output.installation}
+
 ## Useage Info
-Useage Info ="$(data.useage)"
+
+${output.useage}
+
 ## How to Contribute to This
-Contribution Info ="$(data.installation)"
+
+${output.contribution}
+
 ## Testing Info
-Testing Info = "$(data.test)
 
--------
+${output.test}`
 
-Title: ${output.title}
-Project Description: ${output.description}
-Installation Info:${output.installation}`
+
 
     fs.writeFile('README.md', mdtext, (q) => 
         q ? console.log(q) : console.log('Success')
