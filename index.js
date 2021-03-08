@@ -32,7 +32,7 @@ inquirer
         {
             type:'input',
             name:'test',
-            message:'Write whatever you think test means for your project',
+            message:'Please provide any testing information here',
         },
     ])
     .then((data) => createReadmeFile(data))
@@ -45,15 +45,6 @@ inquirer
 function createReadmeFile(output) {
     console.log(output);
     console.log("willy");
-    // let readMeTitle;
-    // let readMeDescription;
-    // const title = "# Title";
-    // const description ="## Description";
-    // const tests = "# Tests";
-    // const useage = "## Useage Info";
-    // const contribution = "## Project Contribution"
-    // const testingInfo = "## Testing";
-    // const installInfo = "## Installation Info";
 
 
     const mdtext = `
@@ -78,7 +69,9 @@ ${output.contribution}
 
 ## Testing Info
 
-${output.test}`
+${output.test}
+
+[link to app demo](https://drive.google.com/file/d/1Da_TAG9CVPQlMJIu8Z8ozw5WmvGnDePp/view)`
 
 
 
